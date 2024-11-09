@@ -70,6 +70,9 @@ public class VRShoot : MonoBehaviour
         // shot cooldown
         Invoke(nameof(ResetShot), shotCooldown);
         Invoke(nameof(ResetHammer), 0.55f);
+
+        // destroy bullet after a few seconds
+        StartCoroutine(DestroyBullet(projectile));
     }
 
     private void ResetHammer()
@@ -80,5 +83,11 @@ public class VRShoot : MonoBehaviour
     private void ResetShot()
     {
         readyToShoot = true;
+    }
+
+    private IEnumerator DestroyBullet(GameObject projectile)
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(projectile);
     }
 }
