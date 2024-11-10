@@ -8,6 +8,8 @@ public class VRShoot : MonoBehaviour
     public GameObject objectToShoot;
     public GameObject attackPoint;
     public ParticleSystem muzzleFlash;
+    public OVRGrabber leftGrabber;
+    public OVRGrabber rightGrabber;
 
     [Header("Settings")]
     public float shotCooldown;
@@ -35,9 +37,16 @@ public class VRShoot : MonoBehaviour
         float triggerLeft = OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
         float triggerRight = OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);
 
-        if (grabbable.isGrabbed && OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, grabbable.grabbedBy.GetController()) && readyToShoot)
+        if (grabbable.isGrabbed && readyToShoot)
         {
-            Shoot();
+            if (grabbable.grabbedBy == leftGrabber && triggerLeft > 0.9f)
+            {
+                Shoot();
+            }
+            if (grabbable.grabbedBy == rightGrabber && triggerRight > 0.9f)
+            {
+                Shoot();
+            }
         }
     }
 

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 90011302}
   m_Layer: 0
   m_Name: Pillar3
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 115742393}
   m_Layer: 0
   m_Name: BackWall
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 292102804}
   m_Layer: 0
   m_Name: LowerWall1 (3)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 383986774}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 410540788}
   m_Layer: 0
   m_Name: LowerWall1 (2)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 486686060}
   m_Layer: 0
   m_Name: LowerWall1 (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1101,7 +1101,7 @@ GameObject:
   - component: {fileID: 677102056}
   m_Layer: 0
   m_Name: Pillar2
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1206,7 +1206,7 @@ GameObject:
   - component: {fileID: 683780610}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1311,7 +1311,7 @@ GameObject:
   - component: {fileID: 702405045}
   m_Layer: 0
   m_Name: Pillar2 (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1402,6 +1402,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702405043}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &830322492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830322494}
+  - component: {fileID: 830322493}
+  m_Layer: 0
+  m_Name: GlobalReferences
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &830322493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830322492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f0e8771a0116d4eb5086e793b96e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletImpactEffectPrefab: {fileID: 2194891311199992714, guid: 17c4e9196d74dbc47a10900b3d56567b, type: 3}
+--- !u!4 &830322494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830322492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7017429, y: 0.90694845, z: 1.5428181}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &849789367 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2483171112401779982, guid: f54012181eacade4ea242c65f804720f, type: 3}
@@ -1686,7 +1731,7 @@ GameObject:
   - component: {fileID: 948194476}
   m_Layer: 0
   m_Name: Pillar3 (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1836,7 @@ GameObject:
   - component: {fileID: 978460607}
   m_Layer: 0
   m_Name: LowerWall1
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1968,7 +2013,7 @@ GameObject:
   - component: {fileID: 1116352265}
   m_Layer: 0
   m_Name: Pillar3 (2)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2073,7 +2118,7 @@ GameObject:
   - component: {fileID: 1154241867}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2164,6 +2209,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1229698244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1267897
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3193882
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000000218557
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179406098883947089, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524547623807643883, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_Name
+      value: intact_target
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524547623807643883, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5524547623807643883, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448224086}
+    - targetCorrespondingSourceObject: {fileID: 5524547623807643883, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448224085}
+  m_SourcePrefab: {fileID: 100100000, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
 --- !u!1 &1252923413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5884405469530735240, guid: 3d6c7430bd21a564489df266ea8864e1, type: 3}
@@ -2184,6 +2304,8 @@ MonoBehaviour:
   objectToShoot: {fileID: 616251305224805369, guid: c596681f1015dae47a0969705687d0ad, type: 3}
   attackPoint: {fileID: 1631014739}
   muzzleFlash: {fileID: 1631014742}
+  leftGrabber: {fileID: 134883445}
+  rightGrabber: {fileID: 849789369}
   shotCooldown: 1
   shootSpeed: 70
 --- !u!82 &1252923415
@@ -2347,7 +2469,7 @@ GameObject:
   - component: {fileID: 1284252903}
   m_Layer: 0
   m_Name: Pillar (2)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2578,6 +2700,41 @@ Transform:
   - {fileID: 383986777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448224085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524547624994325551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efd31756a1d77f4e83ac34cafda0dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crackedTarget: {fileID: 331028758732153557, guid: 11afb7fe1f7404447b30cfbf321e6061, type: 3}
+--- !u!64 &1448224086
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524547624994325551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 451addd318821894c855800e870f3ee0, type: 3}
 --- !u!1 &1492240815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,7 +2749,7 @@ GameObject:
   - component: {fileID: 1492240817}
   m_Layer: 0
   m_Name: Pillar (1)
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2707,7 +2864,7 @@ GameObject:
   - component: {fileID: 1616831487}
   m_Layer: 0
   m_Name: FrontWall
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8008,7 +8165,7 @@ GameObject:
   - component: {fileID: 2125580789}
   m_Layer: 0
   m_Name: Pillar
-  m_TagString: Untagged
+  m_TagString: Wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8099,6 +8256,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125580787}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &5524547624994325551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5524547623807643883, guid: fa98e892cb2d13349895beae0d6fe22e, type: 3}
+  m_PrefabInstance: {fileID: 1229698244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -8112,3 +8274,5 @@ SceneRoots:
   - {fileID: 361127458}
   - {fileID: 515038260}
   - {fileID: 922494471}
+  - {fileID: 1229698244}
+  - {fileID: 830322494}
