@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wood
+  - Ten
+  - Jack
+  - Queen
+  - King
+  - Ace
   layers:
   - Default
   - TransparentFX
