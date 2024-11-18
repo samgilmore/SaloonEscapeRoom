@@ -17,6 +17,10 @@ public class VRShoot : MonoBehaviour
     [Header("Shooting")]
     public float shootSpeed;
 
+    [Header("Haptics")]
+    public float hapticStrength = 0.5f;
+    public float hapticDuration = 0.2f;
+
     bool readyToShoot;
     OVRGrabbable grabbable;
     AudioSource gunshotSound;
@@ -41,11 +45,11 @@ public class VRShoot : MonoBehaviour
         {
             if (grabbable.grabbedBy == leftGrabber && triggerLeft > 0.5f)
             {
-                Shoot();
+                Shoot(leftGrabber);
             }
             if (grabbable.grabbedBy == rightGrabber && triggerRight > 0.5f)
             {
-                Shoot();
+                Shoot(rightGrabber);
             }
         }
     }
@@ -57,7 +61,7 @@ public class VRShoot : MonoBehaviour
     public const string HAMMER = "GunHammer";
     public const string RESET_HAMMER = "ResetHammer";
 
-    private void Shoot()
+    private void Shoot(OVRGrabber grabber)
     {
         gunshotSound.Play();
         muzzleFlash.Play();
@@ -75,6 +79,8 @@ public class VRShoot : MonoBehaviour
         Vector3 forceToAdd = transform.forward * shootSpeed;
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
+        TriggerHaptics(grabber);
 
         // shot cooldown
         Invoke(nameof(ResetShot), shotCooldown);
@@ -98,5 +104,25 @@ public class VRShoot : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         Destroy(projectile);
+    }
+
+    private void TriggerHaptics(OVRGrabber grabber)
+    {
+        if (grabber == leftGrabber)
+        {
+            OVRInput.SetControllerVibration(hapticStrength, hapticStrength, OVRInput.Controller.LTouch);
+        }
+        else if (grabber == rightGrabber)
+        {
+            OVRInput.SetControllerVibration(hapticStrength, hapticStrength, OVRInput.Controller.RTouch);
+        }
+
+        Invoke(nameof(StopHaptics), hapticDuration);
+    }
+
+    private void StopHaptics()
+    {
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 }
