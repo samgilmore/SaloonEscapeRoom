@@ -12,7 +12,7 @@ public class BottlePuzzleTracker : MonoBehaviour
         bool allBroken = true;
         foreach (var bottle in bottles)
         {
-            if (bottle != null && bottle.gameObject.activeSelf)
+            if (bottle != null && bottle.IsBottleActive())
             {
                 allBroken = false;
                 break;

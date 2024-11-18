@@ -7,18 +7,16 @@ public class GlassBreak : MonoBehaviour
 {
     [SerializeField] GameObject bottle;
     [SerializeField] GameObject brokenBottle;
-    [SerializeField] AudioClip glassBreakSound; 
 
-    CapsuleCollider cc;
-    AudioSource audioSource; 
+    BoxCollider cc;
+    public AudioSource audioSource; 
 
     private void Awake()
     {
         bottle.SetActive(true);
         brokenBottle.SetActive(false);
 
-        cc = GetComponent<CapsuleCollider>();
-        audioSource = GetComponent<AudioSource>();
+        cc = GetComponent<BoxCollider>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -31,12 +29,15 @@ public class GlassBreak : MonoBehaviour
             cc.enabled = false;
 
             // Play the glass break sound
-            if (glassBreakSound != null && audioSource != null)
+            if (audioSource != null)
             {
-                audioSource.PlayOneShot(glassBreakSound);
+                audioSource.time = 0.2f;
+                audioSource.Play();
             }
         }
     }
+
+    public bool IsBottleActive() { return bottle.activeSelf; }
 }
 
 

@@ -4,27 +4,16 @@ using UnityEngine;
 
 public class CenterHit : MonoBehaviour
 {
-    public GameObject targetPoint;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private int puzzleIndex;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Dart"))
+        if (collision.gameObject.CompareTag("Dart"))
         {
-            if (other.transform.position == targetPoint.transform.position)
-            { 
-                // Dart hits center of board
+            if (!gameManager.puzzleCompleted[puzzleIndex])
+            {
+                gameManager.CompletePuzzle(puzzleIndex);
             }
         }
     }
