@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CardSolved : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
+    [SerializeField] int puzzleIndex;
+
     List<CardTrigger> childrenTriggers;
-    bool solved = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,20 +23,20 @@ public class CardSolved : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool yep = true;
+        bool solved = true;
         for (int i = 0; i < childrenTriggers.Count; i++)
         {
             if (!childrenTriggers[i].IsSolved)
             {
-                yep = false;
+                solved = false;
+                break;
             }
         }
-        solved = yep;
-        if (solved) { solveddd(); }
-    }
 
-    void solveddd()
-    {
-        Debug.Log("done");
+        if (solved && !gameManager.puzzleCompleted[puzzleIndex])
+        {
+            Debug.Log("Cards placed correctly!");
+            gameManager.CompletePuzzle(puzzleIndex);
+        }
     }
 }
