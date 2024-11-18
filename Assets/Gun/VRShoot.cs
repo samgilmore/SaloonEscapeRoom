@@ -125,4 +125,8 @@ public class VRShoot : MonoBehaviour
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> temp
