@@ -55,7 +55,7 @@ The following assets were sourced externally:
 
 ## 🎥 Video Demonstration
 
-Check out a walkthrough of the game and a user playthrough in our [YouTube video](#) (link to be added). The video also includes a reflection on the design and development process.
+Check out a walkthrough of the game and a user playthrough in our [YouTube video](https://www.youtube.com/watch?v=04OmkBxiaVE). The video also includes a reflection on the design and development process.
 
 ---
 
