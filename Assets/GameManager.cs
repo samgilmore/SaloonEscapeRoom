@@ -14,34 +14,18 @@ public class GameManager : MonoBehaviour
     public GameObject exitDoor;
     public GameObject successTrigger;
 
-    private float[] puzzleTimers = new float[4];
-
     void Start()
     {
+        // Initialize all lights to red
         for (int i = 0; i < lights.Length; i++)
         {
             SetLightColor(i, redMaterial);
-            puzzleTimers[i] = 3f * (i + 1);
         }
 
+        // Hide the success trigger initially
         if (successTrigger != null)
         {
             successTrigger.SetActive(false);
-        }
-    }
-
-    void Update()
-    {
-        for (int i = 0; i < puzzleTimers.Length; i++)
-        {
-            if (!puzzleCompleted[i])
-            {
-                puzzleTimers[i] -= Time.deltaTime;
-                if (puzzleTimers[i] <= 0)
-                {
-                    CompletePuzzle(i);
-                }
-            }
         }
     }
 
@@ -65,7 +49,7 @@ public class GameManager : MonoBehaviour
 
             if (exitDoor != null)
             {
-                Invoke(nameof(HideExitDoor), 1.0f);
+                Invoke(nameof(HideExitDoor), 1.0f); // Delay to allow sounds to finish
             }
         }
     }

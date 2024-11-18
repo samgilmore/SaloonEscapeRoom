@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/SaloonEscapeRoom.unity
+    guid: eaf6bc032996a445fae357d73c89075a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 37a5cab65087b4df9b860cb0de8f71db, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 776c5fb0ed86d46efaca0a91390f3c61, type: 2}
