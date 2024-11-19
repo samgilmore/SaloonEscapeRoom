@@ -126,8 +126,4 @@ public class VRShoot : MonoBehaviour
             OVRHaptics.RightChannel.Preempt(clip);
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> temp
