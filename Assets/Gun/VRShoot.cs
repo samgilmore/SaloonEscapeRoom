@@ -18,8 +18,7 @@ public class VRShoot : MonoBehaviour
     public float shootSpeed;
 
     [Header("Haptics")]
-    public float hapticStrength = 0.5f;
-    public float hapticDuration = 0.2f;
+    public AudioClip audioClip;
 
     bool readyToShoot;
     OVRGrabbable grabbable;
@@ -45,13 +44,19 @@ public class VRShoot : MonoBehaviour
         {
             if (grabbable.grabbedBy == leftGrabber && triggerLeft > 0.5f)
             {
-                Shoot(leftGrabber);
+                Shoot();
             }
             if (grabbable.grabbedBy == rightGrabber && triggerRight > 0.5f)
             {
-                Shoot(rightGrabber);
+                Shoot();
             }
         }
+    }
+
+    OVRInput.Controller GetController()
+    {
+        if (grabbable.grabbedBy == leftGrabber) { return OVRInput.Controller.LTouch; }
+        else { return OVRInput.Controller.RTouch; }
     }
 
     // ---------- //
@@ -61,7 +66,7 @@ public class VRShoot : MonoBehaviour
     public const string HAMMER = "GunHammer";
     public const string RESET_HAMMER = "ResetHammer";
 
-    private void Shoot(OVRGrabber grabber)
+    private void Shoot()
     {
         gunshotSound.Play();
         muzzleFlash.Play();
@@ -80,14 +85,15 @@ public class VRShoot : MonoBehaviour
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
-        TriggerHaptics(grabber);
-
         // shot cooldown
         Invoke(nameof(ResetShot), shotCooldown);
         Invoke(nameof(ResetHammer), 0.55f);
 
         // destroy bullet after a few seconds
         StartCoroutine(DestroyBullet(projectile));
+
+        // Vibration
+        TriggerVibration(audioClip, GetController());
     }
 
     private void ResetHammer()
@@ -106,24 +112,19 @@ public class VRShoot : MonoBehaviour
         Destroy(projectile);
     }
 
-    private void TriggerHaptics(OVRGrabber grabber)
+    private void TriggerVibration(AudioClip vibrationAudio, OVRInput.Controller controller)
     {
-        if (grabber == leftGrabber)
-        {
-            OVRInput.SetControllerVibration(hapticStrength, hapticStrength, OVRInput.Controller.LTouch);
-        }
-        else if (grabber == rightGrabber)
-        {
-            OVRInput.SetControllerVibration(hapticStrength, hapticStrength, OVRInput.Controller.RTouch);
-        }
+        OVRHapticsClip clip = new OVRHapticsClip(vibrationAudio);
+        Debug.Log(vibrationAudio);
 
-        Invoke(nameof(StopHaptics), hapticDuration);
-    }
-
-    private void StopHaptics()
-    {
-        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        if (controller == OVRInput.Controller.LTouch)
+        {
+            OVRHaptics.LeftChannel.Preempt(clip);
+        }
+        else if (controller == OVRInput.Controller.RTouch)
+        {
+            OVRHaptics.RightChannel.Preempt(clip);
+        }
     }
 <<<<<<< HEAD
 }
